@@ -14,11 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('task');
-});
 
-Route::get('bench-geek/',[TaskController::class, 'index'])->name('index');
+
+Route::get('/',[TaskController::class, 'index'])->name('index');
 Route::get('bench-geek/create',[TaskController::class, 'create'])->name('create');
 Route::post('bench-geek/store',[TaskController::class, 'store'])->name('store');
 Route::get('bench-geek/edit/{id}',[TaskController::class, 'edit'])->name('edit');
