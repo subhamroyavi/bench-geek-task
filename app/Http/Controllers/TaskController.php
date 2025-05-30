@@ -25,7 +25,7 @@ class TaskController extends Controller
     {
         // dd($request->all());
         $data = $request->validate([
-            'title' => 'required|unique:task,title|max:50',
+            'title' => 'required|unique:tasks,title|max:50',
             'description' => 'required|max:255',
             'image' => 'required|mimes:jpeg,jpg,png,gif|max:10000',
             'is_completed' => 'required|boolean',
