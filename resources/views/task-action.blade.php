@@ -47,7 +47,7 @@
 
                     @if(isset($data) && $data->image)
                     <div class="mt-2">
-                        <img src="{{ asset('storage/task/'.$data->image) }}" width="100" class="img-thumbnail" alt="Current Image">
+                        <img src="{{ asset('storage/task/'.$data->image) }}" width="100" class="img-thumbnail" alt="{{ $data->image }}">
 
                     </div>
                     @endif
