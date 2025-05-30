@@ -12,12 +12,7 @@ class Task extends Model
     protected $table = 'tasks';
     public $timestamps = false;
 
-    protected $fillable = [
-        'title',
-        'description',
-        'image',
-        'is_completed',
-        'due_date',
-    ];
+    protected $fillable = ['title', 'description', 'image', 'is_completed', 'due_date'];
+
 }
 	// id	title	description	image	is_completed	due_date	
