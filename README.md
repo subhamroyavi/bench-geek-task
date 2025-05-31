@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# <a href="https://bench-geek-task-production.up.railway.app/">bench-geek-task</a>
-PHP Laravel Backend Internship Task
-=======
-# ✅ Laravel Task Manager App
+# ✅ PHP Laravel Backend Internship Task
 
 A simple Task Manager application built with Laravel for managing tasks with image uploads.
 
