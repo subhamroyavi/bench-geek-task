@@ -37,3 +37,9 @@ A simple Task Manager application built with Laravel for managing tasks with ima
 git clone https://github.com/your-username/bench-geek-task.git
 cd bench-geek-task
 
+### 2. Install Dependencies
+
+```bash
+composer install
+
+
