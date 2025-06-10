@@ -16,7 +16,7 @@ use App\Http\Controllers\EricSolutionController;
 */
 
 
-Route::get('/task', [EricSolutionController::class, 'task'])->name('task');
+Route::get('/', [EricSolutionController::class, 'task'])->name('task');
 
 // Route::get('/bench-geek',[TaskController::class, 'index'])->name('index');
 // Route::get('bench-geek/create',[TaskController::class, 'create'])->name('create');

@@ -1,71 +1,103 @@
-<<<<<<< HEAD
-# bench-geek-task
-PHP Laravel Backend Internship Task
-=======
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ✅ PHP Laravel Backend Internship Task
+# 🚀 Laravel Deployment on Railway with MySQL
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+A simple Task Manager application built with Laravel for managing tasks with image uploads.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🌐 Live Demo
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+ [bench-geek-task](https://bench-geek-task-production.up.railway.app/)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## 🧱 Tech Stack
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- PHP 8.x
+- Laravel 10
+- MySQL (via Railway)
+- Blade Templating Engine
+- Bootstrap 5 (for basic styling)
+- Deployed on [Railway](https://railway.app/)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 📋 Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+- Create, view, update, and delete tasks
+- Upload and display images for each task
+- Mark tasks as complete or incomplete
+- Add due dates for tasks
+- Clean UI built using Blade + Bootstrap
+- Fully responsive task listing page
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🚀 Setup Instructions
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/bench-geek-task.git
+cd bench-geek-task
+```
+### 2. Install Dependencies
+```bash
+composer install
+cp .env.example .env
+php artisan key:generate --show
+```
+Set your ```.env``` with local DB credentials or use ```.env.railway ```for production.
+### 4. 🚀 Deployment to Railway
+##### 1. 🌐 Create a Railway Project
+- Go to [Railway](https://railway.com/).
+- Create a new project → New Project > Deploy from GitHub Repo.
+- Select your Laravel repo.
 
-## Contributing
+##### 2. 🛢️ Add a MySQL Plugin
+- In your Railway project dashboard, click ```Add Plugin > MySQL```.
+- Railway will auto-generate:
+```
+DB_HOST 
+DB_PORT
+DB_DATABASE
+DB_USERNAME
+DB_PASSWORD
+```
+These will be auto-injected into your service as environment variables.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+##### 3. ⚙️ Set Environment Variables
+In Railway > ```Deployments > Variables```, add the following if not already set:
 
-## Code of Conduct
+```env
+APP_NAME=Laravel
+APP_ENV=production
+APP_DEBUG=false
+APP_KEY=base64:YOUR_KEY_HERE
+APP_URL=https://your-app.up.railway.app
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+DB_CONNECTION=mysql
+DB_HOST=your-mysql-host.up.railway.app
+DB_PORT=3306
+DB_DATABASE=your-db-name
+DB_USERNAME=your-db-user
+DB_PASSWORD=your-db-password
+```
+To generate APP_KEY locally:
+```bash
+php artisan key:generate --show
+```
+##### 4. ⚙️ Set Build and Start Commands
 
-## Security Vulnerabilities
+Go to Railway → Service → Settings:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Build Command:
+```bash
+composer install && php artisan migrate --force
+```
+- Start Command:
 
-## License
+```bash
+php artisan serve --host 0.0.0.0 --port 8000
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
->>>>>>> eb5db4b (Initial commit)
+##### 5. 🌐 Access the App
+Once deployed, Railway provides a URL like:
+```
+https://your-app.up.railway.app
+```
